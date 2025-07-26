@@ -22,7 +22,10 @@ function Services() {
   return (
     <section
       id="services"
-      className="bg-[url('images/background.jpg')] bg-cover bg-center py-20"
+      className="bg-cover bg-center py-20 mt-10"
+      style={{
+        backgroundImage: "url('../../public/images/background.jpg')"
+      }}
     >
       <h1 className="text-white text-2xl text-center mb-10">
         My Services

@@ -9,16 +9,6 @@ function Hero() {
   const colorMoveTwo = useRef(null);
   const colorMoveThree = useRef(null);
   const colorMoveFour = useRef(null);
-  const headingColorRef = useRef(null);
-  const headingRef = useRef(null);
-  const paragraphColorRef = useRef(null);
-  const paragraphRef = useRef(null);
-  const buttonColorRef = useRef(null);
-  const buttonRef = useRef(null);
-  const phoneColorRef = useRef(null);
-  const phoneRef = useRef(null);
-  const messageColorRef = useRef(null);
-  const messageRef = useRef(null);
   useEffect(() => {
     let tl = gsap.timeline();
     tl
@@ -66,27 +56,12 @@ function Hero() {
         repeatDelay: 0,
         ease: Power2.inOut,
       }, 0);
-      gsap.fromTo(
-        headingColorRef.current,
-        { width: "100%" },
-        {
-          width: 0,
-          duration: 1,
-          padding: 0,
-          ease: Power2.inOut,
-          scrollTrigger: {
-            trigger: headingColorRef.current,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          },
-        }
-      );
   }, []);
-  
+
   return (
     <section
       id="hero"
-      className="mt-15 lg:mt-30 flex flex-col items-center max-w-[320px] mx-auto lg:max-w-screen lg:mx-auto lg:flex-row-reverse lg:justify-center lg:px-20"
+      className="mt-30 lg:mt-30 flex flex-col items-center max-w-[320px] mx-auto lg:max-w-screen lg:mx-auto lg:flex-row-reverse lg:justify-center lg:px-20"
     >
       <div className="flex justify-center mb-10 relative">
         <img
@@ -140,12 +115,9 @@ function Hero() {
           alt="arrow"
           className="absolute -top-5 -left-2 size-20 z-10"
         />
-        <div className="relative">
-          <div ref={headingColorRef} className="bg-[#B237EF] absolute inset-0 z-30 px-6 py-6"></div>
-          <h1 className="uppercase font-medium text-5xl z-10 sm:text-center lg:text-left lg:text-4xl relative">
-            My name is <span className="font-bold">Olatunji Lawal...</span>
-          </h1>
-        </div>
+        <h1 className="uppercase font-medium text-5xl z-10 sm:text-center lg:text-left lg:text-4xl">
+          My name is <span className="font-bold">Olatunji Lawal...</span>
+        </h1>
         <p className="text-xl mt-4 sm:text-center lg:text-left">
           <span className="italic font-semibold">Web Developer</span> based in
           Nigeria

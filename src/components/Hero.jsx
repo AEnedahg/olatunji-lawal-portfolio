@@ -130,7 +130,7 @@ function Hero() {
           alt="arrow"
           className="absolute -top-5 -left-2 size-20 z-5"
         />
-        <h1 className="uppercase font-medium text-5xl z-50 sm:text-center lg:text-left lg:text-4xl">
+        <h1 className="relative z-50 uppercase font-medium text-5xl z-50 sm:text-center lg:text-left lg:text-4xl">
           My name is <span className="font-bold">Olatunji Lawal...</span>
         </h1>
         <p className="text-xl mt-4 sm:text-center lg:text-left">

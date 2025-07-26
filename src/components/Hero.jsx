@@ -66,24 +66,23 @@ function Hero() {
         repeatDelay: 0,
         ease: Power2.inOut,
       }, 0);
+      gsap.fromTo(
+        headingColorRef.current,
+        { width: "100%" },
+        {
+          width: 0,
+          duration: 1,
+          padding: 0,
+          ease: Power2.inOut,
+          scrollTrigger: {
+            trigger: headingColorRef.current,
+            start: "top 80%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
   }, []);
-  useEffect(() => {
-    gsap.fromTo(
-      headingColorRef.current,
-      { width: "100%" },
-      {
-        width: 0,
-        duration: 1,
-        padding: 0,
-        ease: Power2.inOut,
-        scrollTrigger: {
-          trigger: headingColorRef.current,
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      }
-    );
-  }, []);
+  
   return (
     <section
       id="hero"

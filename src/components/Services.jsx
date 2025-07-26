@@ -24,7 +24,7 @@ function Services() {
       id="services"
       className="bg-cover bg-center py-20 mt-10"
       style={{
-        backgroundImage: "url('../../public/images/background.jpg')"
+        backgroundImage: "url('../../public/images/bgc.png')"
       }}
     >
       <h1 className="text-white text-2xl text-center mb-10">

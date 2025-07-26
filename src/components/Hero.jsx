@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { useEffect, useRef } from "react";
 import { gsap, Power2 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,8 +11,9 @@ function Hero() {
   const colorMoveFour = useRef(null);
   useEffect(() => {
     let tl = gsap.timeline();
-    tl
-      .to(colorMoveOne.current, {
+    tl.to(
+      colorMoveOne.current,
+      {
         keyframes: [
           { x: 0, y: 0, percent: 0 },
           { x: 30, y: -25, percent: 100 },
@@ -22,40 +23,54 @@ function Hero() {
         yoyo: true,
         repeatDelay: 0,
         ease: Power2.inOut,
-      }, 0)
-      .to(colorMoveTwo.current, {
-        keyframes: [
-          { x: 0, y: 0, percent: 0 },
-          { x: -30, y: 25, percent: 100 },
-        ],
-        duration: 3,
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0,
-        ease: Power2.inOut,
-      }, 0)
-      .to(colorMoveThree.current, {
-        keyframes: [
-          { x: 0, y: 0, percent: 0 },
-          { x: 30, y: -25, percent: 100 },
-        ],
-        duration: 3,
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0,
-        ease: Power2.inOut,
-      }, 0)
-      .to(colorMoveFour.current, {
-        keyframes: [
-          { x: 0, y: 0, percent: 0 },
-          { x: -30, y: 25, percent: 100 },
-        ],
-        duration: 3,
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: 0,
-        ease: Power2.inOut,
-      }, 0);
+      },
+      0
+    )
+      .to(
+        colorMoveTwo.current,
+        {
+          keyframes: [
+            { x: 0, y: 0, percent: 0 },
+            { x: -30, y: 25, percent: 100 },
+          ],
+          duration: 3,
+          repeat: -1,
+          yoyo: true,
+          repeatDelay: 0,
+          ease: Power2.inOut,
+        },
+        0
+      )
+      .to(
+        colorMoveThree.current,
+        {
+          keyframes: [
+            { x: 0, y: 0, percent: 0 },
+            { x: 30, y: -25, percent: 100 },
+          ],
+          duration: 3,
+          repeat: -1,
+          yoyo: true,
+          repeatDelay: 0,
+          ease: Power2.inOut,
+        },
+        0
+      )
+      .to(
+        colorMoveFour.current,
+        {
+          keyframes: [
+            { x: 0, y: 0, percent: 0 },
+            { x: -30, y: 25, percent: 100 },
+          ],
+          duration: 3,
+          repeat: -1,
+          yoyo: true,
+          repeatDelay: 0,
+          ease: Power2.inOut,
+        },
+        0
+      );
   }, []);
 
   return (
@@ -113,9 +128,9 @@ function Hero() {
         <img
           src="/images/Vector.svg"
           alt="arrow"
-          className="absolute -top-5 -left-2 size-20 z-10"
+          className="absolute -top-5 -left-2 size-20 z-5"
         />
-        <h1 className="uppercase font-medium text-5xl z-10 sm:text-center lg:text-left lg:text-4xl">
+        <h1 className="uppercase font-medium text-5xl z-50 sm:text-center lg:text-left lg:text-4xl">
           My name is <span className="font-bold">Olatunji Lawal...</span>
         </h1>
         <p className="text-xl mt-4 sm:text-center lg:text-left">
@@ -145,4 +160,4 @@ function Hero() {
   );
 }
 
-export default Hero
+export default Hero;

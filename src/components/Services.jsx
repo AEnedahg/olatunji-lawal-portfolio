@@ -24,12 +24,10 @@ function Services() {
       id="services"
       className="bg-cover bg-center py-20 mt-10"
       style={{
-        backgroundImage: "url('../../public/images/bgc.png')"
+        backgroundImage: "url('/images/bgc.png')",
       }}
     >
-      <h1 className="text-white text-2xl text-center mb-10">
-        My Services
-      </h1>
+      <h1 className="text-white text-2xl text-center mb-10">My Services</h1>
 
       <div className="flex flex-col lg:flex-row gap-8 px-6 max-w-screen-lg mx-auto hsm:h-[1700px] lg:h-[400px]">
         {data.map((service) => (
